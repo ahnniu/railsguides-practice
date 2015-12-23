@@ -4,4 +4,19 @@
   <%= @article.text %>
 </p>
 
+<hr>
+<h2>Comments</h2>
+
+<ul>
+  <%= render @article.comments(true) %>  
+</ul>
+
+
+<h3>Add a comment:</h3>
+<%= render "comments/form" %>
+
+
+<hr>
 <%= link_to "Back", articles_path %>
+|
+<%= link_to "Edit", edit_article_path(@article)  %>
